@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: picspie-zuul
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: geust
+    password: guest
+server:
+  port: 8011
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka
+api:
+  user:
+    signup: /picspie-auth/users/signup
+    signin: /picspie-auth/users/signin
+    status: /picspie-auth/users/status
+    actuator: /picspie-auth/actuator/*
+  post:
+    status: /picspie-post/posts/status
+    index: /picspie-post/posts/*
+  comment:
+    status: /picspie-comment/comments/status
+    index: /picspie-comment/comments/*
+  zuul:
+    actuator: /actuator/*    
+authorization:
+  token:
+    header:
+      name: Authorization
+      prefix: Bearer
+token:
+  secret: asd123
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - beans
+          - health
+          - routes
+          - httptrace
+

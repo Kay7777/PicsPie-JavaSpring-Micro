@@ -1,0 +1,43 @@
+server:
+  port: ${PORT:0}
+spring:
+  application:
+    name: picspie-auth
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/users?&serverTimezone=UTC
+    username: root
+    password: songqisyxx
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance._id:${random.value}}
+gateway:
+  ip: 192.168.0.16
+signin:
+  url:
+    path: /users/signin
+token:
+  secret: asd123
+  expiration_time: 1800000
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - mappings

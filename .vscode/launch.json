@@ -1,0 +1,49 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - DemoApplication",
+      "request": "launch",
+      "mainClass": "com.kaysong.picspieauth.DemoApplication"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-PicspieEurekaApplication<picspie-eureka>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.kaysong.picspieeureka.PicspieEurekaApplication",
+      "projectName": "picspie-eureka",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DemoApplication<picspie-auth>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.kaysong.picspieauth.DemoApplication",
+      "projectName": "picspie-auth",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DemoApplication<picspie-zuul>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.kaysong.picspiezuul.DemoApplication",
+      "projectName": "picspie-zuul",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DemoApplication",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.kaysong.picspiecomment.DemoApplication",
+      "args": ""
+    }
+  ]
+}
